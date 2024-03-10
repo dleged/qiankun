@@ -30,21 +30,24 @@
         text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
       }
     </style>
-    <link rel="stylesheet" href="/qiankun/umi.ce23b732.css" />
+    <link rel="stylesheet" href="/qiankun/umi.168f8315.css" />
     <script>
       window.routerBase = "/qiankun";
     </script>
     <script>
-      //! umi version: 3.5.20
+      //! umi version: 3.5.41
     </script>
     <script>
       !(function () {
-        var e = localStorage.getItem("dumi:prefers-color"),
-          t = window.matchMedia("(prefers-color-scheme: dark)").matches,
-          r = ["light", "dark", "auto"];
+        var e =
+            navigator.cookieEnabled && void 0 !== window.localStorage
+              ? localStorage.getItem("dumi:prefers-color")
+              : "auto",
+          o = window.matchMedia("(prefers-color-scheme: dark)").matches,
+          t = ["light", "dark", "auto"];
         document.documentElement.setAttribute(
           "data-prefers-color",
-          e === r[2] ? (t ? r[1] : r[0]) : r.indexOf(e) > -1 ? e : r[0]
+          e === t[2] ? (o ? t[1] : t[0]) : t.indexOf(e) > -1 ? e : t[0]
         );
       })();
     </script>
@@ -90,6 +93,6 @@
         }
       })();
     </script>
-    <script src="/qiankun/umi.55d1a990.js"></script>
+    <script src="/qiankun/umi.2fcfca13.js"></script>
   </body>
 </html>
