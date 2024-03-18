@@ -1,0 +1,140 @@
+yarn run v1.22.21
+$ npm-run-all --parallel start:*
+$ cd examples/purehtml && yarn start
+$ cd examples/main && yarn start
+$ cd examples/angular9 && yarn serve:qiankun
+$ cd examples/react15 && yarn start
+$ cd examples/react16 && yarn start
+$ cd examples/vue && yarn start
+$ cd examples/vue3 && yarn start
+$ webpack-dev-server
+$ cross-env PORT=7104 http-server . --cors
+$ ng serve --disable-host-check --port 7103 --base-href /angular9 --live-reload false
+$ webpack-dev-server
+$ rescripts start
+$ vue-cli-service serve
+$ vue-cli-service serve
+[33mStarting up http-server, serving [39m[36m.[39m[33m[39m
+[33mAvailable on:[39m
+  http://127.0.0.1:[32m7104[39m
+  http://172.20.3.73:[32m7104[39m
+Hit CTRL-C to stop the server
+ INFO  Starting development server...
+ INFO  Starting development server...
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://localhost:7099/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /Users/faith/projj/github.com/dleged/qiankun/examples/main
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://localhost:7102/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from /
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /Users/faith/projj/github.com/dleged/qiankun/examples/react15
+[34mℹ[39m [90m｢wdm｣[39m: wait until bundle finished: /
+[34mℹ[39m [90m｢wds｣[39m: Project is running at http://172.20.3.73/
+[34mℹ[39m [90m｢wds｣[39m: webpack output is served from 
+[34mℹ[39m [90m｢wds｣[39m: Content not from webpack is served from /Users/faith/projj/github.com/dleged/qiankun/examples/react16/public
+[34mℹ[39m [90m｢wds｣[39m: 404s will fallback to /index.html
+Starting the development server...
+
+ DONE  Compiled successfully in 2019ms11:31:14
+
+
+  App running at:
+  - Local:   http://localhost:7105/ 
+  - Network: http://172.20.3.73:7105/
+
+  Note that the development build is not optimized.
+  To create a production build, run yarn build.
+
+[34mℹ[39m [90m｢wdm｣[39m: Hash: 21922f15dab9c9b6aacc
+Version: webpack 4.47.0
+Time: 3887ms
+Built at: 2024/03/26 11:31:14
+      Asset       Size  Chunks                   Chunk Names
+ index.html  685 bytes          [emitted]        
+    main.js   2.03 MiB    main  [emitted]        main
+main.js.map   2.29 MiB    main  [emitted] [dev]  main
+Entrypoint main = main.js main.js.map
+[0] multi (webpack)-dev-server/client?http://localhost:7099 ./index.js 40 bytes {main} [built]
+[../../es/index.js] /Users/faith/projj/github.com/dleged/qiankun/es/index.js 399 bytes {main} [built]
+[./index.js] 2.24 KiB {main} [built]
+[./index.less] 557 bytes {main} [built]
+[./node_modules/webpack-dev-server/client/index.js?http://localhost:7099] (webpack)-dev-server/client?http://localhost:7099 4.29 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/overlay.js] (webpack)-dev-server/client/overlay.js 3.52 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/socket.js] (webpack)-dev-server/client/socket.js 1.53 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/createSocketUrl.js] (webpack)-dev-server/client/utils/createSocketUrl.js 2.91 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/log.js] (webpack)-dev-server/client/utils/log.js 964 bytes {main} [built]
+[./node_modules/webpack-dev-server/client/utils/reloadApp.js] (webpack)-dev-server/client/utils/reloadApp.js 1.59 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/sendMessage.js] (webpack)-dev-server/client/utils/sendMessage.js 402 bytes {main} [built]
+[./node_modules/webpack-dev-server/node_modules/strip-ansi/index.js] (webpack)-dev-server/node_modules/strip-ansi/index.js 161 bytes {main} [built]
+[./node_modules/webpack/hot sync ^\.\/log$] (webpack)/hot sync nonrecursive ^\.\/log$ 170 bytes {main} [built]
+[./node_modules/zone.js/dist/zone.js] 161 KiB {main} [built]
+[./render/ReactRender.jsx] 624 bytes {main} [built]
+    + 298 hidden modules
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [./node_modules/html-webpack-plugin/lib/loader.js!./index.html] 1.05 KiB {0} [built]
+    [./node_modules/lodash/lodash.js] 531 KiB {0} [built]
+    [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {0} [built]
+    [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {0} [built]
+[34mℹ[39m [90m｢wdm｣[39m: Compiled successfully.
+ DONE  Compiled successfully in 3952ms11:31:15
+
+
+  App running at:
+  - Local:   http://localhost:7101/ 
+  - Network: http://172.20.3.73:7101/
+
+  Note that the development build is not optimized.
+  To create a production build, run yarn build.
+
+[34mℹ[39m [90m｢wdm｣[39m: Hash: f4c993be18e2e29799a2
+Version: webpack 4.47.0
+Time: 5964ms
+Built at: 2024/03/26 11:31:16
+      Asset       Size  Chunks                   Chunk Names
+       0.js   1.68 KiB       0  [emitted]        
+   0.js.map   1.26 KiB       0  [emitted] [dev]  
+ index.html  188 bytes          [emitted]        
+    main.js   5.86 MiB    main  [emitted]        main
+main.js.map   5.83 MiB    main  [emitted] [dev]  main
+Entrypoint main = main.js main.js.map
+[0] multi (webpack)-dev-server/client?http://localhost:7102 ./index.js 40 bytes {main} [built]
+[./App.jsx] 596 bytes {main} [built]
+[./dynamic.css] 519 bytes {0} [built]
+[./index.css] 517 bytes {main} [built]
+[./index.js] 1.18 KiB {main} [built]
+[./node_modules/antd/dist/antd.min.css] 502 bytes {main} [built]
+[./node_modules/react-dom/index.js] 59 bytes {main} [built]
+[./node_modules/react/react.js] 56 bytes {main} [built]
+[./node_modules/webpack-dev-server/client/index.js?http://localhost:7102] (webpack)-dev-server/client?http://localhost:7102 4.29 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/overlay.js] (webpack)-dev-server/client/overlay.js 3.52 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/socket.js] (webpack)-dev-server/client/socket.js 1.53 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/createSocketUrl.js] (webpack)-dev-server/client/utils/createSocketUrl.js 2.91 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/log.js] (webpack)-dev-server/client/utils/log.js 964 bytes {main} [built]
+[./node_modules/webpack-dev-server/client/utils/reloadApp.js] (webpack)-dev-server/client/utils/reloadApp.js 1.59 KiB {main} [built]
+[./node_modules/webpack-dev-server/client/utils/sendMessage.js] (webpack)-dev-server/client/utils/sendMessage.js 402 bytes {main} [built]
+    + 1161 hidden modules
+Child html-webpack-plugin for "index.html":
+     1 asset
+    Entrypoint undefined = index.html
+    [./node_modules/html-webpack-plugin/lib/loader.js!./index.html] 359 bytes {0} [built]
+    [./node_modules/lodash/lodash.js] 531 KiB {0} [built]
+    [./node_modules/webpack/buildin/global.js] (webpack)/buildin/global.js 472 bytes {0} [built]
+    [./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 497 bytes {0} [built]
+[34mℹ[39m [90m｢wdm｣[39m: Compiled successfully.
+Compiled successfully!
+
+You can now view react16 in the browser.
+
+  Local:            http://localhost:7100
+  On Your Network:  http://172.20.3.73:7100
+
+Note that the development build is not optimized.
+To create a production build, use yarn build.
+
+
+chunk {main} main.js, main.js.map (main) 3.98 MB [entry] [rendered]
+Date: 2024-03-26T03:31:20.407Z - Hash: c5a676610ccddc54ab6b - Time: 3522ms
+** Angular Live Development Server is listening on localhost:7103, open your browser on http://localhost:7103/ **
+: Compiled successfully.
