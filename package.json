@@ -59,7 +59,8 @@
     "docs:dev": "dumi dev",
     "docs:build": "dumi build",
     "ci": "yarn lint && yarn build && yarn test",
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest",
+    "test:e2e:open": "cypress open --e2e"
   },
   "husky": {
     "hooks": {
@@ -113,6 +114,7 @@
     "@umijs/fabric": "^2.0.7",
     "babel-plugin-import": "^1.12.1",
     "cross-env": "^7.0.2",
+    "cypress": "^13.7.1",
     "dumi": "^1.1.0-beta.24",
     "father-build": "^1.7.0",
     "globals": "^13.17.0",
