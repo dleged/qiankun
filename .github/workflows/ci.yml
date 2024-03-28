@@ -7,7 +7,7 @@ on:
       - master
       - next
       - 1.x
-      - test/cypress-e2e
+      - ci/github-action-cypress
 
 jobs:
   check:
@@ -50,16 +50,18 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    
     # Set up GitHub Actions caching for Wireit.
     - uses: google/wireit@setup-github-actions-caching/v1
-    
+
+    - name: Install dependency
+      run: yarn
+
     - name: Install examples dependency
       run: yarn examples:install
-    
+
     - name: Start examples
       run:  yarn examples:start
-    
+
     - name: Run cypress test
       uses: cypress-io/github-action@v6
       with:
@@ -70,3 +72,5 @@ jobs:
         parallel: true
         record: true
         browser: chrome
+
+
