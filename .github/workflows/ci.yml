@@ -39,38 +39,38 @@ jobs:
       - run: yarn
       - run: yarn ci
       - run: yarn docs:build
+  
   e2e-test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [16.14.0]
     steps:
-    - uses: actions/checkout@v2
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v2
-      with:
-        node-version: ${{ matrix.node-version }}
-    # Set up GitHub Actions caching for Wireit.
-    - uses: google/wireit@setup-github-actions-caching/v1
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      # Set up GitHub Actions caching for Wireit.
+      - uses: google/wireit@setup-github-actions-caching/v1
+      - name: Install dependency
+        run: yarn
 
-    - name: Install dependency
-      run: yarn
+      - name: Install examples dependency
+        run: yarn examples:install
 
-    - name: Install examples dependency
-      run: yarn examples:install
+      - name: Start examples
+        run:  yarn examples:start
 
-    - name: Start examples
-      run:  yarn examples:start
-
-    - name: Run cypress test
-      uses: cypress-io/github-action@v6
-      with:
-        install: false
-        start: node scripts/e2e.js
-        wait-on: 'http://localhost:7100,http://localhost:7101,http://localhost:8092,http://localhost:7102,http://localhost:7103,http://localhost:7104,http://localhost:7105'
-        wait-on-timeout: 600
-        parallel: true
-        record: true
-        browser: chrome
+      - name: Run cypress test
+        uses: cypress-io/github-action@v6
+        with:
+          install: false
+          start: node scripts/runExamplesApp.js
+          wait-on: 'http://localhost:7100,http://localhost:7101,http://localhost:7099,http://localhost:7102,http://localhost:7103,http://localhost:7104,http://localhost:7105'
+          wait-on-timeout: 600
+          parallel: true
+          record: true
+          browser: chrome
 
 

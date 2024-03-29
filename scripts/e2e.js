@@ -1,18 +1,8 @@
-const child_process = require('child_process');
-const spawnSync = child_process.spawnSync;
-
-function runAllExamples() {
-  spawnSync('yarn', ['examples:start'], { stdio: 'inherit' });
-}
-
-function runE2eOpen() {
-  spawnSync('yarn', ['test:e2e:open'], { stdio: 'inherit' });
-}
+const { execSync } = require('child_process');
+const runExampleApp = require('./runExamplesApp');
 
 
-runAllExamples();
-runE2eOpen();
-
-// runAllExamples().then(() => {
-//   spawn('yarn test:e2e:open', { stdio: 'inherit' });
-// });   
+runExampleApp().then(() => {
+  console.log('start e2e test...');
+  const spawnInstance = execSync('yarn test:e2e:open', { stdio: 'inherit' });
+});
