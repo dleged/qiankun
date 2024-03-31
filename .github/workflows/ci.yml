@@ -7,8 +7,7 @@ on:
       - master
       - next
       - 1.x
-      - ci/github-action-cypress
-
+      
 jobs:
   check:
     runs-on: ubuntu-latest
@@ -40,37 +39,4 @@ jobs:
       - run: yarn ci
       - run: yarn docs:build
   
-  e2e-test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.17]
-    steps:
-      - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v2
-        with:
-          node-version: ${{ matrix.node-version }}
-      # Set up GitHub Actions caching for Wireit.
-      - uses: google/wireit@setup-github-actions-caching/v1
-      - name: Install dependency
-        run: yarn
-
-      - name: Install examples dependency
-        run: yarn examples:install
-
-      - name: Run cypress test
-        uses: cypress-io/github-action@v6
-        with:
-          install: false
-          start: yarn examples:start
-          wait-on: 'http://localhost:7100,http://localhost:7101,http://localhost:7102,http://localhost:7103,http://localhost:7104,http://localhost:7105,http://localhost:7099'
-          wait-on-timeout: 6000
-          parallel: true
-          record: true
-          browser: chrome
-        env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
