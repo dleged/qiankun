@@ -63,7 +63,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           install: false
-          start: node scripts/runExamplesApp.js
+          start: yarn examples:start
           wait-on: 'http://localhost:7100,http://localhost:7101,http://localhost:7102,http://localhost:7103,http://localhost:7104,http://localhost:7105,http://localhost:7099'
           wait-on-timeout: 6000
           parallel: true
