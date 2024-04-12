@@ -1,0 +1,60 @@
+Arguments: 
+  /Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js
+
+PATH: 
+  /var/folders/n9/0t75nf315q14stjqt143mrzw0000gn/T/yarn--1712935954603-0.9118707551393019:/Users/fanduanduan/WorkSpace/github.com/dleged/qiankun/node_modules/.bin:/Users/fanduanduan/.config/yarn/link/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node_modules/npm/bin/node-gyp-bin:/var/folders/n9/0t75nf315q14stjqt143mrzw0000gn/T/yarn--1712935923708-0.6438898941221913:/Users/fanduanduan/WorkSpace/github.com/dleged/qiankun/node_modules/.bin:/Users/fanduanduan/.config/yarn/link/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.pyenv/shims:/Users/fanduanduan/.bun/bin:/Users/fanduanduan/Library/pnpm:/Users/fanduanduan/.yarn/bin:/Users/fanduanduan/.config/yarn/global/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin:/Users/fanduanduan/.deno/bin:/Users/fanduanduan/.autojump/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Users/fanduanduan/.cargo/bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  16.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: http://registry.npm.qima-inc.com/react: ETIMEDOUT
+      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141224:19)
+      at listOnTimeout (node:internal/timers:557:17)
+      at processTimers (node:internal/timers:500:7)
+
+npm manifest: 
+  {
+    "name": "main",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "webpack-dev-server",
+      "start:multiple": "cross-env MODE=multiple webpack-dev-server",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "devDependencies": {
+      "@babel/core": "^7.7.2",
+      "@babel/plugin-transform-react-jsx": "^7.7.0",
+      "@babel/preset-env": "^7.7.1",
+      "babel-loader": "^8.0.6",
+      "css-loader": "^3.2.0",
+      "html-webpack-plugin": "^3.2.0",
+      "less-loader": "^6.2.0",
+      "style-loader": "^1.0.0",
+      "webpack": "^4.41.2",
+      "webpack-cli": "^3.3.10",
+      "webpack-dev-server": "^3.9.0",
+      "cross-env": "^7.0.2"
+    },
+    "dependencies": {
+      "react": "^16.13.1",
+      "react-dom": "^16.13.1",
+      "vue": "^2.6.11",
+      "zone.js": "^0.10.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
