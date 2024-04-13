@@ -2,7 +2,7 @@ Arguments:
   /Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node /usr/local/lib/node_modules/yarn/bin/yarn.js
 
 PATH: 
-  /var/folders/n9/0t75nf315q14stjqt143mrzw0000gn/T/yarn--1712935954603-0.9118707551393019:/Users/fanduanduan/WorkSpace/github.com/dleged/qiankun/node_modules/.bin:/Users/fanduanduan/.config/yarn/link/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node_modules/npm/bin/node-gyp-bin:/var/folders/n9/0t75nf315q14stjqt143mrzw0000gn/T/yarn--1712935923708-0.6438898941221913:/Users/fanduanduan/WorkSpace/github.com/dleged/qiankun/node_modules/.bin:/Users/fanduanduan/.config/yarn/link/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.pyenv/shims:/Users/fanduanduan/.bun/bin:/Users/fanduanduan/Library/pnpm:/Users/fanduanduan/.yarn/bin:/Users/fanduanduan/.config/yarn/global/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin:/Users/fanduanduan/.deno/bin:/Users/fanduanduan/.autojump/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Users/fanduanduan/.cargo/bin
+  /var/folders/n9/0t75nf315q14stjqt143mrzw0000gn/T/yarn--1713011114098-0.1753190224506722:/Users/fanduanduan/WorkSpace/github.com/dleged/qiankun/node_modules/.bin:/Users/fanduanduan/.config/yarn/link/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node_modules/npm/bin/node-gyp-bin:/var/folders/n9/0t75nf315q14stjqt143mrzw0000gn/T/yarn--1713011085644-0.1214802143825311:/Users/fanduanduan/WorkSpace/github.com/dleged/qiankun/node_modules/.bin:/Users/fanduanduan/.config/yarn/link/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/libexec/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin/node_modules/npm/bin/node-gyp-bin:/Users/fanduanduan/.pyenv/shims:/Users/fanduanduan/.bun/bin:/Users/fanduanduan/Library/pnpm:/Users/fanduanduan/.yarn/bin:/Users/fanduanduan/.config/yarn/global/node_modules/.bin:/Users/fanduanduan/.nvm/versions/node/v16.13.0/bin:/Users/fanduanduan/.deno/bin:/Users/fanduanduan/.autojump/bin:/Library/Frameworks/Python.framework/Versions/3.10/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/VMware Fusion.app/Contents/Public:/Library/Apple/usr/bin:/Users/fanduanduan/.cargo/bin
 
 Yarn version: 
   1.19.1
@@ -14,10 +14,8 @@ Platform:
   darwin x64
 
 Trace: 
-  Error: http://registry.npm.qima-inc.com/react: ETIMEDOUT
-      at Timeout._onTimeout (/usr/local/lib/node_modules/yarn/lib/cli.js:141224:19)
-      at listOnTimeout (node:internal/timers:557:17)
-      at processTimers (node:internal/timers:500:7)
+  Error: getaddrinfo ENOTFOUND registry.npmjs.com.cn
+      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
 
 npm manifest: 
   {
