@@ -1,6 +1,15 @@
 import { test, expect, chromium } from '@playwright/test';
 
 
+// async clickAndWaitForResponses(locator: string, urlsToWaitFor: string[]) {
+//   const allResponsesPromise = Promise.all(urlsToWaitFor.map(url => page.waitForResponse(url)));
+//   await this.page.locator(locator).first().click();
+//   const responses = await allResponsesPromise;
+// }
+
+// // Calling function
+// await clickAndWaitForResponses(`xpath`, ['url1', url3', 'url2']);
+
 
 test('get started link', async () => {
   // cy.get('h4.subapp-loading').contains('Loading...');
@@ -18,7 +27,7 @@ test('get started link', async () => {
   await page.goto('http://localhost:7099/');
 
   await page.waitForSelector('h4.subapp-loading:has-text("Loading...")');
-  await page.waitForTimeout(3000);
+  await page.waitForTimeout(30);
   await page.waitForSelector('div.app-title:has-text("React Demo")');
 
   expect(page.url()).toContain('react16');
