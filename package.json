@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "examples:install": "npm-run-all --serial build install:*",
-    "examples:start": "npm-run-all --parallel start:*",
+    "examples:start": "concurrently yarn:start:*",
     "examples:start-multiple": "run-p start-main-multiple start:react15 start:vue",
     "install:main": "cd examples/main && yarn",
     "start:main": "cd examples/main && yarn start",
@@ -115,6 +115,7 @@
     "@types/vfile-message": "1.x",
     "@umijs/fabric": "^2.0.7",
     "babel-plugin-import": "^1.12.1",
+    "concurrently": "^8.2.2",
     "cross-env": "^7.0.2",
     "dumi": "^1.1.0-beta.24",
     "father-build": "^1.7.0",
