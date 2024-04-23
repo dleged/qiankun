@@ -5,10 +5,10 @@ function runAllExamples() {
   spawnSync('yarn', ['examples:start'], { stdio: 'inherit' });
 }
 
-function runE2eOpen() {
-  spawnSync('yarn', ['test:e2e:open'], { stdio: 'inherit' });
-}
+// function runE2eOpen() {
+//   spawnSync('yarn', ['test:e2e:open'], { stdio: 'inherit' });
+// }
 
 runAllExamples();
-runE2eOpen();
+// runE2eOpen();
 
