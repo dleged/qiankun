@@ -74,7 +74,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'yarn examples:start',
+    command: 'echo "yarn examples:start"',
     // url: 'http://127.0.0.1:7099',
     stdout: 'pipe',
     reuseExistingServer: !process.env.CI,

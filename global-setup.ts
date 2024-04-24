@@ -1,29 +1,17 @@
 import { request } from '@playwright/test';
-import child_process from 'child_process';
+// import child_process from 'child_process';
 
-const { spawn } = child_process;
-
+// const { spawn } = child_process;
 
 const ExampleEntry = ['http://localhost:7100', 'http://localhost:7102', 'http://localhost:7101', 'http://localhost:7103', 'http://localhost:7104', 'http://localhost:7105', 'http://localhost:7099'];
 
-// async clickAndWaitForResponses(locator: string, urlsToWaitFor: string[]) {
-//   const allResponsesPromise = Promise.all(urlsToWaitFor.map(url => page.waitForResponse(url)));
-//   await this.page.locator(locator).first().click();
-//   const responses = await allResponsesPromise;
-// }
-
-// // Calling function
-// await clickAndWaitForResponses(`xpath`, ['url1', url3', 'url2']);
-
-
-
 // 启动 examples:start 命令
-const startProcess = spawn('npm', ['run', 'examples:start'], { stdio: 'inherit' });
+// const startProcess = spawn('npm', ['run', 'examples:start'], { stdio: 'inherit' });
 
-// 监听命令的输出
-startProcess.on('data', (_data: any) => {
-  checkServices();
-});
+// // 监听命令的输出
+// startProcess.on('data', (_data: any) => {
+//   checkServices();
+// });
 
 
 // 检查每个服务是否成功启动
@@ -52,10 +40,10 @@ async function waitForResponse() {
 
 async function globalSetup() {
   // 执行 yarn examples:start 命令
-  spawn('yarn', ['examples:start'], { stdio: 'inherit' });
+  // spawn('yarn', ['examples:start'], { stdio: 'inherit' });
 
   console.log('Global setup running...');
-  await waitForResponse();
+  // await waitForResponse();
   console.log('Global Setup Finished!');
 
 }

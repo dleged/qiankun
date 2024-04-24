@@ -1,21 +1,11 @@
-import { test, expect, chromium } from '@playwright/test';
+const { chromium } = require('playwright');
 
-
-// async clickAndWaitForResponses(locator: string, urlsToWaitFor: string[]) {
-//   const allResponsesPromise = Promise.all(urlsToWaitFor.map(url => page.waitForResponse(url)));
-//   await this.page.locator(locator).first().click();
-//   const responses = await allResponsesPromise;
-// }
-
-// // Calling function
-// await clickAndWaitForResponses(`xpath`, ['url1', url3', 'url2']);
-
-
-test('', async () => {
-
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
-
+(async () => {
+  const browser = await chromium.launch({
+    headless: false
+  });
+  const context = await browser.newContext();
+  const page = await context.newPage();
   await page.goto('http://localhost:7099/');
   await page.goto('http://localhost:7099/react16');
   await page.getByRole('button', { name: 'CLICK ME' }).click();
@@ -59,7 +49,6 @@ test('', async () => {
   await page.frameLocator('iframe').locator('body').click();
 
   // ---------------------
+  await context.close();
   await browser.close();
-
-  await browser.close();
-});
+})();
