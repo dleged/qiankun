@@ -8,6 +8,13 @@ on:
       - 1.x
       - test/playwright-e2e
 jobs:
+  check:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x]
+
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
