@@ -10,7 +10,7 @@ on:
       - test/playwright-e2e
 
 jobs:
-  check:
+  playwright-run:
     runs-on: ubuntu-latest
 
     strategy:
