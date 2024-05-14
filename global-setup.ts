@@ -13,6 +13,9 @@ const ExampleEntry = ['http://localhost:7100', 'http://localhost:7102', 'http://
 //   checkServices();
 // });
 
+function wait(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 // 检查每个服务是否成功启动
 function checkServices() {
@@ -30,20 +33,41 @@ function checkServices() {
 }
 
 async function waitForResponse() {
-  for (const entry of ExampleEntry) {
-    console.log(entry);
-    (await request.newContext({ ignoreHTTPSErrors: true })).fetch(entry);
-    console.log('ServerUrl:', entry);
 
-  }
+  return new Promise((resolve) => {
+
+    let retryCount = 0;
+    const maxRetryCount = 5;
+    async function retry() {
+      const entrys = [];
+      for (const entry of ExampleEntry) {
+        console.log(entry);
+        entrys.push((await request.newContext({ ignoreHTTPSErrors: true })).fetch(entry));
+        console.log('ServerUrl:', entry);
+      }
+
+      Promise.all(entrys).then((result) => {
+        console.log('global setup ', result);
+        resolve(true);
+      }).catch(() => {
+        if (maxRetryCount < retryCount) return resolve(false);
+        retryCount++;
+        retry();
+      });
+    }
+
+    retry();
+  });
 }
 
 async function globalSetup() {
-  // 执行 yarn examples:start 命令
-  // spawn('yarn', ['examples:start'], { stdio: 'inherit' });
-
   console.log('Global setup running...');
-  // await waitForResponse();
+  const lanuchSuccess = await waitForResponse();
+
+  if(lanuchSuccess){
+   await wait(30 * 1000);
+  }
+
   console.log('Global Setup Finished!');
 
 }

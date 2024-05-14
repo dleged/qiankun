@@ -33,7 +33,7 @@ export default defineConfig({
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
   },
-
+  timeout: 5 * 6 * 1000,
   /* Configure projects for major browsers */
   projects: [
     {
@@ -74,8 +74,7 @@ export default defineConfig({
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'echo "yarn examples:start"',
-    // url: 'http://127.0.0.1:7099',
+    command: 'yarn examples:start',
     stdout: 'pipe',
     reuseExistingServer: !process.env.CI,
   },

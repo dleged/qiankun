@@ -11,7 +11,7 @@ import { test, expect, chromium } from '@playwright/test';
 // await clickAndWaitForResponses(`xpath`, ['url1', url3', 'url2']);
 
 
-test('', async () => {
+test('app', async () => {
 
   const browser = await chromium.launch();
   const page = await browser.newPage();
