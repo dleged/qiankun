@@ -27,8 +27,6 @@ jobs:
       run: npx playwright install --with-deps
     - name: Start examples
       run: yarn examples:start
-    - name: Wait for 1 minutes
-      run: sleep 60
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
