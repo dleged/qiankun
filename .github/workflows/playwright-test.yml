@@ -18,9 +18,11 @@ jobs:
       with:
         node-version: 18
     - name: Install dependencies
-      run: npm ci
+      run: yarn examples:install 
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
+    - names: start examples
+      run: yarn examples:start
     - name: Run Playwright tests
       run: npx playwright test
     - uses: actions/upload-artifact@v4
