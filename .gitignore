@@ -19,7 +19,7 @@ package-lock.json
 .eslintcache
 .history
 .now
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
+test-results/
+playwright-report/
+blob-report/
+playwright

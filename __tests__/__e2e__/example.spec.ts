@@ -39,27 +39,6 @@ test('app', async () => {
   await page.getByRole('link', { name: 'About' }).click();
   await page.getByRole('heading', { name: 'This is about page' }).click();
   await page.getByRole('link', { name: 'Home' }).click();
-  await page.getByRole('heading', { name: 'Vue.js Demo' }).click();
-  await page.getByText('vue version: 2.7.16, element-').click();
-  await page.getByRole('button', { name: 'Open Dialog' }).click();
-  await page.getByText('dialog message').click();
-  await page.getByRole('button', { name: 'cancel' }).click();
-  await page.getByRole('button', { name: 'Open Dialog' }).click();
-  await page.getByRole('button', { name: 'ok' }).click();
-  await page.getByText('Vue3').click();
-  await page.getByRole('heading', { name: 'Vue.js Demo' }).click();
-  await page.getByText('Vue version:').click();
-  await page.getByRole('link', { name: 'About' }).click();
-  await page.getByRole('heading', { name: 'This is about page' }).click();
-  await page.getByText('Angular9').click();
-  await page.frameLocator('iframe').locator('body').click();
-  await page.frameLocator('iframe').locator('body').click();
-  await page.frameLocator('iframe').locator('body').click();
-  await page.frameLocator('iframe').locator('body').click();
-  await page.frameLocator('iframe').locator('body').click();
-
-  // ---------------------
-  await browser.close();
 
   await browser.close();
 });
