@@ -16,6 +16,8 @@ test('app', async () => {
   const browser = await chromium.launch();
   const page = await browser.newPage();
 
+  await page.waitForTimeout(20 * 1000);
+
   await page.goto('http://localhost:7099/');
   await page.goto('http://localhost:7099/react16');
   await page.getByRole('button', { name: 'CLICK ME' }).click();

@@ -14,7 +14,7 @@ export default defineConfig({
   /* Folder for test artifacts such as screenshots, videos, traces, etc. */
   outputDir: 'playwright/e2e/test-artifacts/',
   /* Path to the global setup file. This file will be required and run before all the tests. */
-  globalSetup: './global-setup',
+  // globalSetup: './global-setup',
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
