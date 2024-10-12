@@ -5,7 +5,6 @@ on:
     branches:
       - master
       - next
-      - 1.x
       - test/playwright-e2e
 
 jobs:
