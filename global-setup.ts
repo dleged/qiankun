@@ -62,11 +62,11 @@ async function waitForResponse() {
 
 async function globalSetup() {
   console.log('Global setup running...');
-  const lanuchSuccess = await waitForResponse();
+  // const lanuchSuccess = await waitForResponse();
 
-  if(lanuchSuccess){
-   await wait(30 * 1000);
-  }
+  // if(lanuchSuccess){
+  //  await wait(30 * 1000);
+  // }
 
   console.log('Global Setup Finished!');
 

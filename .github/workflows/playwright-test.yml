@@ -40,8 +40,8 @@ jobs:
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
 
-    - name: Start development servers
-      run: yarn examples:start & sleep 30
+    # - name: Start development servers
+      # run: yarn examples:start & sleep 30
 
     - name: Run Playwright tests
       run: yarn playwright test
