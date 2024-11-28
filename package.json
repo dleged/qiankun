@@ -109,7 +109,7 @@
     "single-spa": "^5.9.2"
   },
   "devDependencies": {
-    "@playwright/test": "^1.43.1",
+    "@playwright/test": "1.40.0",
     "@types/jest": "^25.1.4",
     "@types/lodash": "^4.14.129",
     "@types/vfile-message": "1.x",
