@@ -11,13 +11,15 @@ import { test, expect, chromium } from '@playwright/test';
 // await clickAndWaitForResponses(`xpath`, ['url1', url3', 'url2']);
 
 
-test('app', async () => {
-
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
+test.beforeEach(async ({ page }) => {
+  // const browser = await chromium.launch();
+  // const page = await browser.newPage();
 
   await page.waitForTimeout(20 * 1000);
+});
 
+
+test('Application navigation test', async ({ page }) => {
   await page.goto('http://localhost:7099/');
   await page.goto('http://localhost:7099/react16');
   await page.getByRole('button', { name: 'CLICK ME' }).click();
@@ -41,6 +43,14 @@ test('app', async () => {
   await page.getByRole('link', { name: 'About' }).click();
   await page.getByRole('heading', { name: 'This is about page' }).click();
   await page.getByRole('link', { name: 'Home' }).click();
-
-  await browser.close();
 });
+
+
+test('Style test', async ({ page }) => {
+
+});
+
+
+test('Global ');
+
+
