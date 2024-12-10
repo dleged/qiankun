@@ -60,7 +60,6 @@
     "docs:build": "dumi build",
     "ci": "yarn lint && yarn build && yarn test",
     "test": "cross-env NODE_ENV=test jest",
-    "test:e2e": "node ./scripts/e2e",
     "test:e2e:open": "npx playwright test"
   },
   "husky": {
