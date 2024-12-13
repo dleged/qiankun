@@ -6,7 +6,8 @@
     "antd": "^3.25.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-router-dom": "^5.1.2"
+    "react-router-dom": "^5.1.2",
+    "styled-components": "^6.1.13"
   },
   "scripts": {
     "start": "rescripts start",
